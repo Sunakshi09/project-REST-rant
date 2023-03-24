@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {
-  res.render("Home");
+  res.render("home");
 });
 
 app.get("*", (req, res) => {

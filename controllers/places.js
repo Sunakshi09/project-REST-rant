@@ -1,54 +1,56 @@
-const router = require('express').Router()
+const router = require("express").Router();
+router.get("/", (req, res) => {
+  let places = [
+    {
+      name: "H-Thai-ML",
+      city: "Seattle",
+      state: "WA",
+      cuisines: "Thai, Pan-Asian",
+      pic: "https://media-cdn.tripadvisor.com/media/photo-s/1c/f2/ed/be/costillas-y-milanesa.jpg",
+    },
+    {
+      name: "Coding Cat Cafe",
+      city: "Phoenix",
+      state: "AZ",
+      cuisines: "Coffee, Bakery",
+      pic: "http://placekitten.com/250/250",
+    },
+  ];
+  res.render("places/index", { places });
+});
 
-router.get('/', (req, res) => {
-    let places = [{
-        name: 'H-Thai-ML',
-        city: 'Seattle',
-        state: 'WA',
-        cuisines: 'Thai, Pan-Asian',
-        pic: '/images/rest-rant-1.jpg'
-      }, {
-          name: 'Coding Cat Cafe',
-          city: 'Phoenix',
-          state: 'AZ',
-          cuisines: 'Coffee, Bakery',
-          pic: '/images/rest-rant-2.jpg'
-      }]
-      
-      
-    res.render('places/index', {places})
-})
+router.get("/new", (req, res) => {
+  res.send("New form for a place");
+});
 
-router.get('/new', (req, res) => {
-    res.send('New form for a place')
-})
+router.post("/places", (req, res) => {
+  res.send("Create a new place");
+});
 
-router.post('/', (req, res) => {
-    res.send('Create a new place')
-})
+router.get("/:id", (req, res) => {
+  res.send(
+    "Show one place in detail (Associated rants, new rant form, delete rant button)"
+  );
+});
 
-router.get('/:id', (req, res) => {
-    res.send('Show one place in detail (Associated rants, new rant form, delete rant button)')
-})
+router.get("/:id/edit", (req, res) => {
+  res.send("Edit form for a place");
+});
 
-router.get('/:id/edit', (req, res) => {
-    res.send('Edit form for a place')
-})
+router.put("/:id", (req, res) => {
+  res.send("Make changes to existing place");
+});
 
-router.put('/:id', (req, res) => {
-    res.send('Make changes to existing place')
-})
+router.delete("/:id", (req, res) => {
+  res.send("Delete a place");
+});
 
-router.delete('/:id', (req, res) => {
-    res.send('Delete a place')
-})
+router.post("/:id/rant", (req, res) => {
+  res.send("Add rant to a place");
+});
 
-router.post('/:id/rant', (req, res) => {
-    res.send('Add rant to a place')
-})
+router.delete("/:id/rant/:rantId", (req, res) => {
+  res.send("Delete a rant");
+});
 
-router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('Delete a rant')
-})
-
-module.exports = router
+module.exports = router;
