@@ -6,14 +6,14 @@ router.get("/", (req, res) => {
       city: "Seattle",
       state: "WA",
       cuisines: "Thai, Pan-Asian",
-      pic: "https://media-cdn.tripadvisor.com/media/photo-s/1c/f2/ed/be/costillas-y-milanesa.jpg",
+      pic: "/images/h-thai-ml-tables.jpg",
     },
     {
       name: "Coding Cat Cafe",
       city: "Phoenix",
       state: "AZ",
       cuisines: "Coffee, Bakery",
-      pic: "http://placekitten.com/250/250",
+      pic: "/images/coffee-cat.jpg",
     },
   ];
   res.render("places/index", { places });
