@@ -12,7 +12,7 @@ function Def (html) {
 				<nav>
 					<ul>
 						<li>
-							<a href="/home">Home</a>
+							<a href="/">Home</a>
 						</li>
 						<li>
 							<a href="/places">Places</a>
