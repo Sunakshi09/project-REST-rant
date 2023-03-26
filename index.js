@@ -12,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // Controllers & Routes
 app.use(express.urlencoded({ extended: true }));
-
 app.use("/places", require("./controllers/places"));
 
 app.get("/", (req, res) => {

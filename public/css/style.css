@@ -12,18 +12,23 @@ h1 {
   color: rgb(81, 108, 183);
 }
 
+h2 {
+  color: rgb(71, 85, 118);
+}
+
 body {
   background-color: lightblue;
   text-align: center;
 }
 
 main {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 5px;
   background-attachment: relative;
-  background-image: linear-gradient(rgba(34, 229, 20, 0), rgb(125, 198, 202));
+  background-image: linear-gradient(rgba(212, 212, 188, 0), rgb(108, 166, 224));
   width: 100% auto;
-  height: 780px;
+  height: 790px;
   z-index: 1;
 }
 
@@ -55,7 +60,7 @@ nav a:hover {
 }
 
 img {
-  width: 350pt;
+  width: 310pt;
   height: auto;
   padding: 5px;
   border: 2px solid orange;
