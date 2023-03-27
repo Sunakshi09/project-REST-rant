@@ -26,10 +26,15 @@ router.get("/new", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  res.send(
-    "Show one place in detail (Associated rants, new rant form, delete rant button)"
-  );
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else {
+    res.render("places/show");
+  }
 });
+
+("Show one place in detail (Associated rants, new rant form, delete rant button)");
 
 router.get("/:id/edit", (req, res) => {
   res.send("Edit form for a place");
