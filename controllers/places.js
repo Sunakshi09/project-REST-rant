@@ -29,23 +29,45 @@ router.get("/:id", (req, res) => {
   let id = Number(req.params.id);
   if (isNaN(id)) {
     res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
   } else {
-    res.render("places/show");
+    res.render("places/show", { place: places[id], id });
   }
 });
 
-("Show one place in detail (Associated rants, new rant form, delete rant button)");
-
 router.get("/:id/edit", (req, res) => {
-  res.send("Edit form for a place");
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    res.render("places/edit", { place: places[id], id });
+  }
 });
 
 router.put("/:id", (req, res) => {
-  res.send("Make changes to existing place");
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    res.render("places/id", { place: places[id], id });
+  }
 });
 
 router.delete("/:id", (req, res) => {
-  res.send("Delete a place");
+  let id = Number(req.params.id);
+  if (isNaN(id)) {
+    res.render("error404");
+  } else if (!places[id]) {
+    res.render("error404");
+  } else {
+    places.splice(id, 1);
+    res.redirect("/places");
+  }
 });
 
 router.post("/:id/rant", (req, res) => {
