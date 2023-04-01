@@ -5,6 +5,7 @@ function Def (html) {
         <html>
             <head>
 				<title>Title</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 				<link rel="stylesheet" href="/css/style.css" />
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossOrigin="anonymous" />
 			</head>
@@ -12,7 +13,7 @@ function Def (html) {
 				<nav>
 					<ul>
 						<li>
-							<a href="/home">Home</a>
+							<a href="/">Home</a>
 						</li>
 						<li>
 							<a href="/places">Places</a>
@@ -23,6 +24,7 @@ function Def (html) {
 					</ul>
 				</nav>
 				{html.children}
+				<footer className="footer">Resume | Portfolio | Linkedin </footer>
 			</body>
 		</html>
 	)
