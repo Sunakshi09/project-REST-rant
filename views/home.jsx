@@ -15,7 +15,8 @@ function home () {
               <a href="/places">
         <a href="#" class="btn btn-info" role="button">Places Page</a>
     </a>
-    </main>
+    
+</main>
       </Def>
     )
   }
