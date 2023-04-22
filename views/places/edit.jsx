@@ -24,6 +24,10 @@ function edit (data) {
 						<label htmlFor="state">State</label>
 						<input className="form-control" id="state" name="state" value={data.place.state} required/>
 					</div>
+					<div className="form-group col-sm-4">
+                        <label htmlFor="founded">Founded</label>
+                        <input className="form-control" id="founded" name="founded" value={data.place.founded} />
+					</div>
                     </div>
                     <div className="form-group">
 						<label htmlFor="cuisines">Cuisines</label>
