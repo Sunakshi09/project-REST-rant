@@ -13,6 +13,9 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
+  if (req.body.pic === "") {
+    req.body.pic = undefined;
+  }
   if (req.body.city === "") {
     req.body.city = undefined;
   }
@@ -45,7 +48,9 @@ router.get("/new", (req, res) => {
 
 router.get("/:id", (req, res) => {
   db.Place.findById(req.params.id)
+    .populate("comments")
     .then((place) => {
+      console.log(place.comments);
       res.render("places/show", { place });
     })
     .catch((err) => {

@@ -28,7 +28,7 @@ main {
   background-attachment: relative;
   background-image: linear-gradient(rgba(212, 212, 188, 0), rgb(108, 166, 224));
   width: 100% auto;
-  height: 790px;
+  height: auto;
   z-index: 1;
 }
 
@@ -64,4 +64,23 @@ img {
   height: auto;
   padding: 5px;
   border: 2px solid orange;
+}
+
+form {
+  display: inline;
+  width: auto;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding: 25px;
+}
+
+.inactive {
+  color: rgb(112, 110, 110);
+}
+
+.border {
+  border: 2px solid rgb(62, 61, 61);
+}
+img {
+  height: 20em;
 }
